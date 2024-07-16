@@ -15,7 +15,7 @@ class Form(StatesGroup):
     username = State()
     age = State()
 
-@dp.message_handler(commands='start')
+@dp.message_handler(commands='start') 
 async def cmd_start(message: types.Message):
     await Form.username.set()
     await message.reply("Привет! Как тебя зовут?")
