@@ -43,7 +43,7 @@ async def news(message: Message):
             response = requests.get(url=url)
             response.raise_for_status()  
             soup = BeautifulSoup(response.text, 'html.parser')
-            
+        
             all_news = soup.find_all('div', class_='one')
             
             for news_item in all_news:
